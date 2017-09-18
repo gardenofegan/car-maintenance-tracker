@@ -1,25 +1,25 @@
 <template>
   <div class="card">
     <div class="header">
-      <h4 class="title">Edit Profile</h4>
+      <h4 class="title">Add New Maintanence Record</h4>
     </div>
     <div class="content">
       <form>
         <div class="row">
           <div class="col-md-5">
             <fg-input type="text"
-                      label="Company"
+                      label="Vehicle"
                       :disabled="true"
-                      placeholder="Paper dashboard"
-                      v-model="user.company">
+                      placeholder="Nissan Sentra"
+                      v-model="user.vehicle">
             </fg-input>
           </div>
           <div class="col-md-3">
 
             <fg-input type="text"
-                      label="Username"
-                      placeholder="Username"
-                      v-model="user.username">
+                      label="Mileage"
+                      placeholder="Mileage"
+                      v-model="user.mileage">
             </fg-input>
           </div>
           <div class="col-md-4">
@@ -109,8 +109,8 @@
     data () {
       return {
         user: {
-          company: 'Paper Dashboard',
-          username: 'michael23',
+          vehicle: 'Nissan Sentra',
+          mileage: '33,568',
           email: '',
           lastName: 'Faker',
           address: 'Melbourne, Australia',

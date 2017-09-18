@@ -6,17 +6,10 @@
     <div class="content">
       <div class="author">
         <img class="avatar border-white" src="static/img/faces/face-2.jpg" alt="...">
-        <h4 class="title">Chet Faker
-          <br>
-          <a href="#">
-            <small>@chetfaker</small>
-          </a>
-        </h4>
+        <h4 class="title">2013 Nissan Sentra</h4>
       </div>
       <p class="description text-center">
-        "I like the way you work it
-        <br> No diggity
-        <br> I wanna bag it up"
+        A dependable everyday vehicle
       </p>
     </div>
     <hr>
@@ -38,15 +31,15 @@
       return {
         details: [
           {
-            title: '12',
-            subTitle: 'Files'
+            title: '33,568',
+            subTitle: 'Miles'
           },
           {
             title: '2GB',
             subTitle: 'Used'
           },
           {
-            title: '24,6$',
+            title: '$12,450',
             subTitle: 'Spent'
           }
         ]
