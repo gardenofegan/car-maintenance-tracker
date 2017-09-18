@@ -24,41 +24,41 @@
 
       <div class="col-xs-12">
         <chart-card :chart-data="usersChart.data" :chart-options="usersChart.options">
-          <h4 class="title" slot="title">Users behavior</h4>
-          <span slot="subTitle"> 24 Hours performance</span>
+          <h4 class="title" slot="title">Total Cost of Ownership</h4>
+          <span slot="subTitle">All Vehicles</span>
           <span slot="footer">
             <i class="ti-reload"></i> Updated 3 minutes ago</span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Open
-            <i class="fa fa-circle text-danger"></i> Click
-            <i class="fa fa-circle text-warning"></i> Click Second Time
+            <i class="fa fa-circle text-info"></i> Sentra
+            <i class="fa fa-circle text-warning"></i> Town & Country
+            <!-- <i class="fa fa-circle text-warning"></i> Click Second Time -->
           </div>
         </chart-card>
       </div>
 
       <div class="col-md-6 col-xs-12">
-        <chart-card :chart-data="preferencesChart.data"  chart-type="Pie">
-          <h4 class="title" slot="title">Email Statistics</h4>
-          <span slot="subTitle"> Last campaign performance</span>
+        <chart-card :chart-data="preferencesChart.data" chart-type="Pie">
+          <h4 class="title" slot="title">Maintanence Costs by Category</h4>
+          <span slot="subTitle"> % of total cost across active vehicles</span>
           <span slot="footer">
-            <i class="ti-timer"></i> Campaign set 2 days ago</span>
+            <i class="ti-timer"></i> Last updated 2 days ago</span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Open
-            <i class="fa fa-circle text-danger"></i> Bounce
-            <i class="fa fa-circle text-warning"></i> Unsubscribe
+            <i class="fa fa-circle text-info"></i> Heating & A/C
+            <i class="fa fa-circle text-danger"></i> Other
+            <i class="fa fa-circle text-warning"></i> Tires
           </div>
         </chart-card>
       </div>
 
       <div class="col-md-6 col-xs-12">
-        <chart-card :chart-data="activityChart.data" :chart-options="activityChart.options">
-          <h4 class="title" slot="title">2015 Sales</h4>
-          <span slot="subTitle"> All products including Taxes</span>
+        <chart-card :chart-data="activityChart.data" :chart-options="activityChart.options" chart-type="Bar">
+          <h4 class="title" slot="title">Maintanence by Month</h4>
+          <span slot="subTitle"> Across all years</span>
           <span slot="footer">
-            <i class="ti-check"></i> Data information certified</span>
+            <i class="ti-check"></i> Last updated a week ago</span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Tesla Model S
-            <i class="fa fa-circle text-warning"></i> BMW 5 Series
+            <i class="fa fa-circle text-info"></i> Sentra
+            <i class="fa fa-circle text-warning"></i> Town & Country
           </div>
         </chart-card>
       </div>
@@ -82,50 +82,49 @@
       return {
         statsCards: [
           {
-            type: 'warning',
+            type: 'info',
             icon: 'ti-car',
             title: 'Sentra',
             value: 'Nissan',
-            footerText: 'Updated now',
-            footerIcon: 'ti-reload'
+            footerText: 'Last update a month ago',
+            footerIcon: 'ti-calendar'
           },
           {
-            type: 'success',
-            icon: 'ti-wallet',
-            title: 'Miles',
-            value: '120,200',
-            footerText: 'Last day',
+            type: 'warning',
+            icon: 'ti-car',
+            title: 'Town & Country',
+            value: 'Chrysler',
+            footerText: 'Updated yesterday',
             footerIcon: 'ti-calendar'
           },
           {
             type: 'danger',
-            icon: 'ti-pulse',
-            title: 'TCO',
-            value: '$12,005',
-            footerText: 'Total Cost of Ownership',
+            icon: 'ti-plus',
+            title: 'Add Vehicle',
+            value: ' ',
+            footerText: 'Click to add',
             footerIcon: 'ti-timer'
           },
           {
-            type: 'info',
-            icon: 'ti-twitter-alt',
-            title: 'Current Value',
-            value: '$7,251',
-            footerText: 'via KBB.com',
-            footerIcon: 'ti-reload'
+            type: 'danger',
+            icon: 'ti-plus',
+            title: 'Add Vehicle',
+            value: ' ',
+            footerText: 'Click to add',
+            footerIcon: 'ti-timer'
           }
         ],
         usersChart: {
           data: {
             labels: ['1/2011', '7/2011', '1/2012', '7/2012', '1/2013', '7/2013', '1/2014', '7/2014'],
             series: [
-              [287, 385, 490, 562, 594, 626, 698, 895, 952],
-              [67, 152, 193, 240, 387, 435, 535, 642, 744],
-              [23, 113, 67, 108, 190, 239, 307, 410, 410]
+              [10000, 10150, 10225, 10562, 10594, 11626, 12698, 12895, 14952],
+              [7000, 7152, 7193, 8240, 8387, 8435, 9535, 9642, 9744]
             ]
           },
           options: {
             low: 0,
-            high: 1000,
+            high: 15000,
             showArea: true,
             height: '245px',
             axisX: {
@@ -142,12 +141,12 @@
           data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             series: [
-              [542, 543, 520, 680, 653, 753, 326, 434, 568, 610, 756, 895],
-              [230, 293, 380, 480, 503, 553, 600, 664, 698, 710, 736, 795]
+              [0, 543, 220, 680, 40, 500, 123, 434, 68, 610, 756, 5],
+              [230, 203, 0, 80, 30, 55, 600, 664, 88, 10, 0, 795]
             ]
           },
           options: {
-            seriesBarDistance: 10,
+            seriesBarDistance: 7,
             axisX: {
               showGrid: false
             },

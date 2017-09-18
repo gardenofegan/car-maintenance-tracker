@@ -8,10 +8,10 @@
     <div class="sidebar-wrapper" id="style-3">
       <div class="logo">
         <a href="#" class="simple-text">
-            <div class="logo-img">
+            <!-- <div class="logo-img">
                 <img src="static/img/vue-logo.png" alt="">
-            </div>
-          Paper Dashboard
+            </div> -->
+          Car Maintanence
         </a>
       </div>
       <slot>
